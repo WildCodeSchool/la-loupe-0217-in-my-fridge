@@ -57938,7 +57938,13 @@ angular.module('app')
 angular.module("app").run(["$templateCache", function($templateCache) {
 
   $templateCache.put("anon/home.html",
-    "\n"
+    "<div class=\"container-fluid home\">\n" +
+    "    <div class=\"row\">\n" +
+    "        <div class=\"col-md-3\"></div>\n" +
+    "        <div class=\"col-md-6\"></div>\n" +
+    "        <div class=\"col-md-3\"></div>\n" +
+    "    </div>\n" +
+    "</div>\n"
   );
 
   $templateCache.put("anon/login.html",
@@ -57961,7 +57967,7 @@ angular.module("app").run(["$templateCache", function($templateCache) {
   );
 
   $templateCache.put("anon/navbar.html",
-    "<nav class=\"navbar navbar-default\" role=\"navigation\" ng-controller=\"NavbarController\">\n" +
+    "<nav class=\"navbar navbar-default navbar-fixed-top\" role=\"navigation\" ng-controller=\"NavbarController\">\n" +
     "    <div class=\"container-fluid\">\n" +
     "        <div class=\"navbar-header\">\n" +
     "            <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#navbar\">\n" +
@@ -57973,8 +57979,8 @@ angular.module("app").run(["$templateCache", function($templateCache) {
     "            <a class=\"navbar-brand\" href=\"#\"></a>\n" +
     "        </div>\n" +
     "        <div class=\"collapse navbar-collapse\" id=\"navbar\">\n" +
-    "            <ul class=\"nav navbar-nav\">\n" +
-    "                <li ui-sref-active=\"active\"><a ui-sref=\"anon.home\">Home</a></li>\n" +
+    "            <ul class=\"nav navbar-nav title-font logo\">\n" +
+    "                <li ui-sref-active=\"active\"><a ui-sref=\"anon.home\">In My Fridge</a></li>\n" +
     "\n" +
     "            </ul>\n" +
     "            <ul class=\"nav navbar-nav navbar-right\">\n" +
