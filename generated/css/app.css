@@ -7344,6 +7344,9 @@ button.close {
 
 /* Navbar */
 
+<<<<<<< HEAD
+
+=======
 .navbar {
     min-height: 50px;
     margin-bottom: 0;
@@ -7388,6 +7391,7 @@ button.close {
 
 .row {
     height: 600px;
+>>>>>>> navbar first add
 }
 
 

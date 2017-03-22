@@ -57788,6 +57788,15 @@ angular.module('app')
     });
 
 angular.module('app')
+    .service('recipeService', function($http) {
+        return {
+            getAll: function() {
+                return $http.get('http://food2fork.com/api/search?key=a9d96f05e69633450b746a68935e7b83 ');
+            }
+        };
+    });
+
+angular.module('app')
     .service('UserService', function($http) {
         return {
             getAll: function() {
@@ -57829,7 +57838,11 @@ angular.module('app')
     });
 
 angular.module('app')
-    .controller('MainController', function($scope) {
+    .controller('MainController', function($scope, recipeService) {
+      recipeService.getAll().then(function(res){
+        $scope.all = res.data ;
+        console.log(res.data);
+      });
       /* Here is your main controller */
     });
 
