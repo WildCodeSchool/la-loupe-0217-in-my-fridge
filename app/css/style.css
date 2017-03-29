@@ -14,26 +14,63 @@
     box-shadow: none;
 }
 
-@font-face {
-    font-family: 'Boogaloo', cursive;
-    src: url('https://fonts.googleapis.com/css?family=Boogaloo');
-}
-
 .title-font {
     font-family: 'Boogaloo', cursive;
     font-size: 40px;
+}
+
+@font-face {
+    font-family: 'ChalkboardSE';
+    src: url('/fonts/ChalkboardSE-Regular.ttf');
+}
+
+body {
+    font-family: 'ChalkboardSE-Regular', cursive;
+}
+
+
+/*.chalkboard-font {
+    font-family: 'ChalkboardSE-Regular', cursive;
+}*/
+
+ul.nav.navbar-nav.title-font.logo {
+    color: #fff;
+    background-image: linear-gradient(to bottom, #47A7F7 0%, #47A7F7 100%);
+    box-shadow: 3px 3px 6px 0 rgb(39, 39, 39);
+    border-radius: 2px;
 }
 
 .navbar-default .navbar-nav>.active>a {
     color: #fff;
     background-image: linear-gradient(to bottom, #47A7F7 0%, #47A7F7 100%);
     box-shadow: 3px 3px 6px 0 rgb(39, 39, 39);
-    border-radius: 3px;
-    padding: 17px 0 20px 16px;
+    border-radius: 2px;
 }
 
-.navbar-default .navbar-nav>.active>a:hover {
-    color: #9a9a9a;
+.navbar-nav>li>a {
+    text-shadow: 0 0 0 rgba(255, 255, 255, 0);
+}
+
+a.sign-btn {
+    padding: 5px 16px 5px 16px!important;
+    margin-left: 10px;
+    color: #fff;
+    background-image: linear-gradient(to bottom, #47A7F7 0%, #47A7F7 100%);
+    box-shadow: 3px 3px 6px 0 rgb(39, 39, 39);
+    border-radius: 2px;
+    font-size: 16px;
+    font-family: 'ChalkboardSE-Regular', cursive;
+    cursor: pointer;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    .navbar-right {
+        margin-right: 15px;
+    }
 }
 
 .navbar-brand {
@@ -50,12 +87,16 @@ img.logo {
 a.text-logo {
     text-align: left;
     width: 7em;
+    height: 1.4em;
 }
 
+
 /* Login - Modal */
+
 .login-modal {
     margin-top: 10em;
 }
+
 
 /* Home  */
 
