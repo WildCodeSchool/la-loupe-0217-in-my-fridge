@@ -6,8 +6,6 @@
 body {
     font-family: 'ChalkboardSE', cursive;
 }
-
-
 /* Navbar */
 
 .navbar {
@@ -29,19 +27,7 @@ body {
     font-size: 40px;
 }
 
-@font-face {
-    font-family: 'ChalkboardSE';
-    src: url('/fonts/ChalkboardSE-Regular.ttf');
-}
 
-body {
-    font-family: 'ChalkboardSE', cursive;
-}
-
-
-/*.chalkboard-font {
-    font-family: 'ChalkboardSE-Regular', cursive;
-}*/
 
 ul.nav.navbar-nav.title-font.logo {
     color: #fff;
