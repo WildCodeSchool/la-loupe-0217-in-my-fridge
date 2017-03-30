@@ -19,16 +19,6 @@
     font-size: 40px;
 }
 
-/*@font-face {
-    font-family: 'ChalkboardSE';
-    src: url('/fonts/ChalkboardSE-Regular.ttf');
-}
-
-body {
-    font-family: 'ChalkboardSE-Regular', cursive;
-}*/
-
-
 ul.nav.navbar-nav.title-font.logo {
     color: #fff;
     background-image: linear-gradient(to bottom, #47A7F7 0%, #47A7F7 100%);
