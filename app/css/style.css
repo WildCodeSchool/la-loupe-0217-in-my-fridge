@@ -27,19 +27,6 @@ body {
     font-size: 40px;
 }
 
-<<<<<<< HEAD
-=======
-/*@font-face {
-    font-family: 'ChalkboardSE';
-    src: url('/fonts/ChalkboardSE-Regular.ttf');
-}
-
-body {
-    font-family: 'ChalkboardSE-Regular', cursive;
-}*/
->>>>>>> navbar
-
-
 ul.nav.navbar-nav.title-font.logo {
     color: #fff;
     background-image: linear-gradient(to bottom, #47A7F7 0%, #47A7F7 100%);
