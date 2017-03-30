@@ -10,6 +10,10 @@ angular.module('app')
                     'navbar@': {
                         templateUrl: 'anon/navbar.html',
                         controller: 'NavbarController'
+                    },
+                    "footer@":{
+                      templateUrl: 'anon/footer.html',
+                      controller: 'FooterController'
                     }
                 }
             })
@@ -21,24 +25,6 @@ angular.module('app')
                         controller: 'MainController'
                     }
                 }
-            })
-            .state('anon.login', {
-                url: '/login',
-                views: {
-                    'content@': {
-                        templateUrl: 'anon/login.html',
-                        controller: 'LoginController'
-                    }
-                }
-            })
-            .state('anon.register', {
-                url: '/register',
-                views: {
-                    'content@': {
-                        templateUrl: 'anon/register.html',
-                        controller: 'RegisterController'
-                    }
-                }
             });
         $stateProvider
             .state('user', {
@@ -48,6 +34,10 @@ angular.module('app')
                     'navbar@': {
                         templateUrl: 'user/navbar.html',
                         controller: 'NavbarController'
+                    },
+                    "footer@":{
+                      templateUrl: 'anon/footer.html',
+                      controller: 'FooterController'
                     }
                 },
                 data: {
@@ -71,6 +61,7 @@ angular.module('app')
                         controller: 'ProfileController'
                     }
                 }
-            });
+              });
+
         $urlRouterProvider.otherwise('/');
     });
