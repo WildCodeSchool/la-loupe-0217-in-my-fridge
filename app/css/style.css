@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'ChalkboardSE';
+    src: url('/fonts/ChalkboardSE-Regular.ttf');
+}
+body {
+    font-family: 'ChalkboardSE', cursive;
+}
+
 /* Navbar */
 
 .navbar {
@@ -12,11 +20,6 @@
     background-color: rgba(255, 255, 255, 0);
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(248, 248, 248, 0) 100%);
     box-shadow: none;
-}
-
-@font-face {
-    font-family: 'Boogaloo', cursive;
-    src: url('https://fonts.googleapis.com/css?family=Boogaloo');
 }
 
 .title-font {
@@ -52,10 +55,13 @@ a.text-logo {
     width: 7em;
 }
 
+
 /* Login - Modal */
+
 .login-modal {
     margin-top: 10em;
 }
+
 
 /* Home  */
 
@@ -66,6 +72,56 @@ a.text-logo {
     height: 10em;
 }
 
-.row {
-    height: 600px;
+footer {
+    background-image: url(/img/footer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.policecolor {
+    color: white;
+}
+
+.font {
+    font-family: Boogaloo, cursive;
+}
+
+
+footer i.fa.fa {
+  margin-right: 5px;
+}
+h3 {
+  text-shadow: 6px -1px 6px rgba(255, 255, 255, 0.35);
+  font-size: 25px;
+  margin-bottom: 0.5em;
+
+}
+
+a:link {
+    color: white;
+}
+a:visited {
+    color: white;
+  }
+a:before {
+  color: white;
+}
+a:active {
+  color: white;
+}
+li:nth-child(6) {
+  list-style: none;
+}
+#ppp {
+  position: absolute;
+  top: 5.9em;
+  left: 4vw;
+}
+.fts {
+  font-family: 'ChalkboardSE-Regular', cursive;
+}
+footer ul {
+    list-style-type: none;
+    padding-left: 0;
 }
