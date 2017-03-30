@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'ChalkboardSE';
+    src: url('/fonts/ChalkboardSE-Regular.ttf');
+}
+
+body {
+    font-family: 'ChalkboardSE', cursive;
+}
+
+
 /* Navbar */
 
 .navbar {
@@ -107,6 +117,74 @@ a.text-logo {
     height: 10em;
 }
 
-.row {
-    height: 600px;
+footer {
+    background-image: url(/img/footer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    padding: 1em 1em 1em 1em;
+}
+
+.footer-text {
+    font-size: 20px;
+}
+
+.policecolor {
+    color: white;
+}
+
+.font {
+    font-family: Boogaloo, cursive;
+}
+
+footer i.fa.fa {
+    margin-right: 5px;
+}
+
+h3 {
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.6);
+    font-size: 25px;
+    margin-bottom: 0.5em;
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+a:before {
+    color: white;
+}
+
+a:active {
+    color: white;
+}
+
+li:nth-child(6) {
+    list-style: none;
+}
+
+#ppp {
+    /*position: absolute;
+    top: 5.9em;
+    left: 4vw;*/
+}
+
+footer ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.pad-copyright {
+    padding-top: 6em;
+}
+@media screen and (max-width:768px) {
+  .pad-copyright {
+      padding-top: 2em;
+  }
+  .footer-text {
+    font-size: 12px;
+}
 }

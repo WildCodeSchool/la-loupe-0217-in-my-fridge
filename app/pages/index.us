@@ -6,15 +6,17 @@
         <%= pkg.name %>
     </title>
 
+
     <link rel="stylesheet" type="text/css" href="<%= css %>" media="all" />
     <link href="https://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet">
+
 </head>
 
 <body>
 
     <div ui-view='navbar'></div>
     <div ui-view='content'></div>
-
+    <div ui-view='footer'></div>
     <script type="text/javascript" src="<%= js %>"></script>
 </body>
 
