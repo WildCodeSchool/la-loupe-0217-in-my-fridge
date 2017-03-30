@@ -25,24 +25,6 @@ angular.module('app')
                         controller: 'MainController'
                     }
                 }
-            })
-            .state('anon.login', {
-                url: '/login',
-                views: {
-                    'content@': {
-                        templateUrl: 'anon/login.html',
-                        controller: 'LoginController'
-                    }
-                }
-            })
-            .state('anon.register', {
-                url: '/register',
-                views: {
-                    'content@': {
-                        templateUrl: 'anon/register.html',
-                        controller: 'RegisterController'
-                    }
-                }
             });
         $stateProvider
             .state('user', {
