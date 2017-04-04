@@ -8,6 +8,7 @@
     src: url('https://fonts.googleapis.com/css?family=Boogaloo');
 }
 
+
 /* Navbar */
 
 .navbar {
@@ -47,7 +48,7 @@ ul.nav.navbar-nav.title-font.logo {
     text-shadow: 0 0 0 rgba(255, 255, 255, 0);
 }
 
-a.sign-btn {
+.sign-btn {
     padding: 5px 16px 5px 16px!important;
     margin-left: 10px;
     color: #fff;
@@ -87,11 +88,19 @@ a.text-logo {
 }
 
 
-
-/* Login - Modal */
+/* Login - Register - Modal */
 
 .login-modal {
     margin-top: 10em;
+}
+
+.input-modal {
+    opacity: 0.8!important;
+    border: 1px solid rgba(93, 93, 93, 0.28)!important;
+}
+
+.modal-backdrop {
+    position: relative;
 }
 
 
@@ -101,6 +110,7 @@ body {
     font-family: 'ChalkboardSE', cursive;
     background-image: url(/img/home-background.jpg);
     background-repeat: no-repeat;
+    background-size: 100vw;
 }
 
 h2 {
@@ -110,6 +120,7 @@ h2 {
 .form-control {
     height: 50px;
     opacity: 0.5;
+    border: 1px solid #5d5d5d;
 }
 
 .search {
@@ -176,6 +187,7 @@ h2 {
     border-radius: 20px;
     opacity: 0.7;
 }
+
 
 /***** Footer *****/
 
@@ -251,4 +263,36 @@ footer ul {
     .footer-text {
         font-size: 12px;
     }
+}
+
+
+/******* Profile *******/
+
+.back-profile {
+    /* background-color: rgba(165, 42, 42, 0.74); */
+    /* margin: 8em 5em 5em 5em; */
+    background-image: url(/img/4454029-food.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.back-form-profile {
+    background-color: rgba(165, 42, 42, 0.62);
+    color: #f8f8ff;
+}
+
+.well {
+    background-image: -webkit-linear-gradient(top, #484848 0%, #f5f5f5 100%);
+    background-image: -o-linear-gradient(top, #484848 0%, #f5f5f5 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#484848), to(#f5f5f5));
+    background-image: linear-gradient(to bottom, #484848 0%, #f5f5f5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe8e8e8', endColorstr='#fff5f5f5', GradientType=0);
+    min-height: 20px;
+    border: 0px solid rgba(255, 255, 255, 0);
+    -webkit-box-shadow: 2px 3px 10px rgba(72, 72, 72, 0.85);
+    box-shadow: 2px 3px 10px rgba(72, 72, 72, 0.85);
+}
+
+input[type="file"] {
+    display: inline-flex;
 }
