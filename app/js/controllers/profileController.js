@@ -1,4 +1,14 @@
 angular.module('app')
-    .controller('ProfileController', function($scope, CurrentUser) {
-      $scope.user = CurrentUser.user();
+    .controller('ProfileController', function($scope, CurrentUser, UserService) {
+
+        $scope.user = CurrentUser.user();
+
+        $scope.updateUser = function() {
+            UserService.update($scope.user._id, $scope.user).then(function(res) {
+                //good
+            }, function(err) {
+                //bad
+            });
+        };
+
     });

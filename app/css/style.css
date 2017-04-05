@@ -103,8 +103,38 @@ a.text-logo {
     position: relative;
 }
 
+.modal-open {
+    overflow: auto;
+}
+
 
 /* Home  */
+
+.space::after {
+    content: ' ';
+}
+
+.comma::after {
+    content: ', ';
+}
+
+.span-ingredients {
+    background-color: #f75000;
+    display: inline-block;
+    padding: 5px 10px 11px 10px;
+    font-size: 80%;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+
+.span-ingredients:hover {
+    background-color: #af3900;
+}
 
 body {
     font-family: 'ChalkboardSE', cursive;
@@ -183,9 +213,9 @@ h2 {
 
 #fridge {
     padding: 25px 30px 25px 30px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.7);
     border-radius: 20px;
-    opacity: 0.7;
+    /*opacity: 0.7;*/
 }
 
 
@@ -279,6 +309,7 @@ footer ul {
 .back-form-profile {
     background-color: rgba(165, 42, 42, 0.62);
     color: #f8f8ff;
+    margin: 7em auto;
 }
 
 .well {
