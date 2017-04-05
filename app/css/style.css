@@ -106,6 +106,10 @@ a.text-logo {
     overflow: auto;
 }
 
+.modal-open {
+    overflow: auto;
+}
+
 
 /* Home  */
 
