@@ -18,6 +18,7 @@
     <div ui-view='footer'></div>
 
     <script type="text/javascript" src="<%= js %>"></script>
+  
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 <!--Login-Register Modal -->
-
+<div class="bodystyle">
 <div class="row modal fade" id="logMod">
     <div class="col-xs-6 col-xs-offset-3 login-modal">
         <form class="form" name="loginForm" novalidate ng-submit="login()">
@@ -42,23 +42,40 @@
         <div class="col-xs-12 col-sm-3 text-center" id="fridge">
             <div class="categories">
 
-                <h2>Category</h2>
-                <div class="row">
-                    <div class="col-xs-4">
-                        <a href=""><img class="icons" ng-click="ingredients=dairy" src="img/Milk-icon.svg" alt=""></a>
-                        <p>Dairy</p>
-                    </div>
+              <h2>Category</h2>
+              <div class="row">
+                  <div class="col-xs-4">
+                      <a href=""><img class="icons" ng-click="category(0)" src="img/Milk-icon.svg" alt=""></a>
+                      <p>Dairy</p>
+                  </div>
 
-                    <div class="col-xs-4">
-                        <a href=""><img class="icons" ng-click="ingredients=meat" src="img/Meat-icon.svg" alt=""></a>
-                        <p>Meats</p>
-                    </div>
+                  <div class="col-xs-4">
+                      <a href=""><img class="icons" ng-click="category(1)" src="img/Meat-icon.svg"  alt=""></a>
+                      <p>Meats</p>
+                  </div>
 
-                    <div class="col-xs-4">
-                        <a href=""><img class="icons" ng-click="ingredients=fish" src="img/Fish-icon.svg" alt=""></a>
-                        <p>Fish</p>
-                    </div>
-                </div>
+                  <div class="col-xs-4">
+                      <a href=""><img class="icons" ng-click="category(2)" src="img/Fish-icon.svg" alt=""></a>
+                      <p>Fish</p>
+                  </div>
+              </div>
+
+              <div class="row">
+                  <div class="col-xs-4">
+                      <a href=""><img class="icons" ng-click="category(3)" src="img/Strawberry-icon.svg" alt=""></a>
+                      <p>Fruits</p>
+                  </div>
+
+                  <div class="col-xs-4">
+                      <a href=""><img class="icons" ng-click="category(4)" src="img/Kettle-icon.svg" alt=""></a>
+                      <p>Spices</p>
+                  </div>
+
+                  <div class="col-xs-4">
+                      <a href=""><img class="icons" ng-click="category(5)" src="img/Tomato-icon.svg" alt=""></a>
+                      <p>Vegetables</p>
+                  </div>
+              </div>
 
                 <div class="row">
                     <div class="col-xs-4">
@@ -71,24 +88,14 @@
                         <p>Spices</p>
                     </div>
 
-                    <div class="col-xs-4">
-                        <a href=""><img class="icons" ng-click="ingredients=vegetables" src="img/Tomato-icon.svg" alt=""></a>
-                        <p>Vegetables</p>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="ingredients">
-                <div class="row">
-                    <div class="col-xs-2">
-                        <img class="wrist" src="img/poignet.png" alt="">
-                    </div>
-                    <div class="col-xs-9">
-
-                        <h2>Ingredients</h2>
-                    </div>
-                </div>
+                      <h2>Ingredients</h2>
+                  </div>
+              </div>
+              <div class="bloc-ingredients">
+                                  <span ng-repeat="ingredient in ingredients" ng-class="{space:!$last}">
+                                    <a href=""><span class="span-ingredients" ng-click="show(ingredient)">{{ingredient}}</span></a>
+                                  </span>
+                              </div>
 
 
                 <div class="bloc-ingredients">
@@ -108,25 +115,32 @@
             <form>
                 <div class="row">
                     <div class="col-xs-offset-2 col-xs-8">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="">
+                        <div class="form ng-submit">
+                            <input type="text" class="form-control" placeholder="" ng-model='selected'>
+                            <!-- <div ng-repeat="ingredient in recipes">{{}}</div> -->
                         </div>
                     </div>
                 </div>
-                <button type="submit" ng-click="repRecipes()" class="btn btn-primary">Find Recipes</button></form>
+                <button type="submit" ng-click="showRecipe1()" class="btn btn-primary">Find Recipes</button></form>
         </div>
 
         <div class="col-xs-12 col-sm-3 rightside">
 
-            <div class="row recipes" style="background-color:#0E9EFF">
+                <div class="row recipes" style="background-color:#0E9EFF" ng-repeat="data in datas">
 
-                <div class="col-xs-3 photos">
+                    <div class="col-xs-3 photos">
+
+                        <a href="#"><img class="photos" src="{{data.image_url}}" alt=""></a>
+                    </div>
+
+                    <div class="col-xs-9 text-center">
+                        <div class="">
 
                     <a href="#"><img class="photos" src="img/cajun.jpg" alt=""></a>
                 </div>
 
-                <div class="col-xs-9 text-center">
-                    <div class="">
+                            <p>{{data.title}}</p>
+                            <p>{{data.publisher_url}}</p>
 
 
                         <p>Cajun Chicken Pasta</p>
@@ -139,8 +153,8 @@
 
                     </div>
 
-                </div>
-            </div>
+                <!-- <div class="row recipes" style="background-color:orange">
+                    <div class="col-xs-3 photos">
 
 
             <div class="row recipes" style="background-color:orange">
@@ -150,8 +164,8 @@
 
                 </div>
 
-                <div class="col-xs-9 text-center">
-                    <div class="">
+                          <p>{{title}}</p>
+                          <p>{{site}}</p>
 
 
                         <p>Cajun Chicken Pasta</p>
@@ -176,8 +190,8 @@
 
                 </div>
 
-                <div class="col-xs-9 text-center">
-                    <div class="">
+                          <p>{{title}}</p>
+                          <p>{{site}}</p>
 
 
                         <p>Cajun Chicken Pasta</p>
@@ -200,8 +214,8 @@
                     <a href="#"><img class="photos" src="img/cajun.jpg" alt=""></a>
                 </div>
 
-                <div class="col-xs-9 text-center">
-                    <div class="">
+                          <p>{{title}}</p>
+                          <p>{{site}}</p>
 
 
                         <p>Cajun Chicken Pasta</p>
@@ -213,6 +227,7 @@
 
 
                     </div>
+                </div> -->
 
                 </div>
             </div>
@@ -220,5 +235,48 @@
         </div>
     </div>
 
-</div>
-</div>
+  </div>
+  </div>
+  <div class="container-fluid fava">
+      <h3 class="text-center title-font Cook policecolor">My favorites recipes!</h3>
+
+      <div class="row fava">
+          <div class="col-xs-3">
+              <div class="thumbnail">
+                  <img class="thbimg" src="../img/scampi.jpg">
+                  <div class="caption text-center">
+                      <h3>Scampi</h3>
+                      <a><i  style="color:black;"class="fa fa-share-alt-square fa-4x"></i></a><i style="color:black;" class="fa fa-heart fa-4x"></i><i  style="color:black;"class="fa fa-commenting fa-4x" aria-hidden="true"></i>
+                  </div>
+              </div>
+
+          </div>
+          <div class="col-xs-3">
+              <div class="thumbnail">
+                  <img class="thbimg" src="../img/pesto.jpg">
+                  <div class="caption text-center">
+                      <h3>Pattes au saumons</h3>
+                      <a><i  style="color:black;"class="fa fa-share-alt-square fa-4x"></i></a><a><i  style="color:black;"class="fa fa-heart fa-4x"></i></a href="#"><a><i style="color:black;" class="fa fa-commenting fa-4x" aria-hidden="true"></i></a> </div>
+              </div>
+
+          </div>
+          <div class="col-xs-3">
+              <div class="thumbnail">
+                  <img class="thbimg" src="../img/sandwich.jpg">
+                  <div class="caption text-center">
+                      <h3>Titre miniature</h3>
+                      <a><i  style="color:black;"class="fa fa-share-alt-square fa-4x"></i></a><i  style="color:black;"class="fa fa-heart fa-4x"></i><i  style="color:black;"class="fa fa-commenting fa-4x" aria-hidden="true"></i> </div>
+              </div>
+
+          </div>
+          <div class="col-xs-3">
+              <div class="thumbnail">
+                  <img class="thbimg" src="../img/cajun.jpg">
+                  <div class="caption text-center">
+                      <h3>Titre miniature</h3>
+                      <a><i style="color:black;" class="fa fa-share-alt-square fa-4x"></i></a><i  style="color:black;"class="fa fa-heart fa-4x"></i><i style="color:black;" class="fa fa-commenting fa-4x" aria-hidden="true"></i> </div>
+              </div>
+
+          </div>
+      </div>
+  </div>

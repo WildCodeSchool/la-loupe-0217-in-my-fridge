@@ -11,10 +11,11 @@ angular.module('app')
                         templateUrl: 'anon/navbar.html',
                         controller: 'NavbarController'
                     },
-                    'footer@':{
-                      templateUrl: 'anon/footer.html',
-                      controller: 'FooterController'
+                    'footer@': {
+                        templateUrl: 'anon/footer.html',
+                        controller: 'FooterController'
                     }
+
                 }
             })
             .state('anon.home', {
@@ -26,6 +27,7 @@ angular.module('app')
                     }
                 }
             });
+
         $stateProvider
             .state('user', {
                 abstract: true,
@@ -35,9 +37,9 @@ angular.module('app')
                         templateUrl: 'user/navbar.html',
                         controller: 'NavbarController'
                     },
-                    'footer@':{
-                      templateUrl: 'anon/footer.html',
-                      controller: 'FooterController'
+                    'footer@': {
+                        templateUrl: 'anon/footer.html',
+                        controller: 'FooterController'
                     }
                 },
                 data: {

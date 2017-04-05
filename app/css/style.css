@@ -110,12 +110,19 @@ a.text-logo {
 
 /* Home  */
 
-.space::after {
-    content: ' ';
+.bodystyle {
+    font-family: 'ChalkboardSE', cursive;
+    background-image: url(/img/home-background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    padding-bottom: 3em;
 }
 
-.comma::after {
-    content: ', ';
+h2 {
+    margin-top: 8px;
+}
+space:after {
+    content: ' ';
 }
 
 .span-ingredients {
@@ -131,22 +138,9 @@ a.text-logo {
     vertical-align: baseline;
     border-radius: .25em;
 }
-
 .span-ingredients:hover {
     background-color: #af3900;
 }
-
-body {
-    font-family: 'ChalkboardSE', cursive;
-    background-image: url(/img/home-background.jpg);
-    background-repeat: no-repeat;
-    background-size: 100vw;
-}
-
-h2 {
-    margin-top: 8px;
-}
-
 .form-control {
     height: 50px;
     opacity: 0.5;
@@ -208,14 +202,14 @@ h2 {
 }
 
 #main {
-    margin-top: 200px;
+    padding-top:200px;
 }
 
 #fridge {
     padding: 25px 30px 25px 30px;
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 20px;
-    /*opacity: 0.7;*/
+
 }
 
 
@@ -326,4 +320,53 @@ footer ul {
 
 input[type="file"] {
     display: inline-flex;
+}
+
+/****Dashboard****/
+.fava {
+  background: #cb2d3e; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #cb2d3e , #ef473a); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #cb2d3e , #ef473a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 2em;
+}
+.dashb {
+  min-height: 100vh;
+  background-image: url(/img/legumes-2_preview.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.dashc {
+  min-height: 30vh;
+  width: auto;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.thbimg {
+margin-top: 2vh;
+background-size: contain;
+}
+
+.Cook {
+  margin-top: 0.5em;
+  margin-bottom: 2em;
+  font-size: 6.5em;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.6);
+}
+.Thubmnail {
+  margin top: 2vh
+}
+img.thbimg {
+    width: 100%;
+}
+i {
+  margin-left: 0.2em;
+margin-right:  0.2em;
+}
+.pb {
+  margin-bottom: 5em;
+}
+a.thumbnail {
+  color: black;
 }
