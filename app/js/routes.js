@@ -53,15 +53,6 @@ angular.module('app')
                     }
                 }
             })
-            .state('user.todolist', {
-                url: '/todo',
-                views: {
-                    'content@': {
-                        templateUrl: 'user/todo.html',
-                        controller: 'TodoController'
-                    }
-                }
-            })
             .state('user.profile', {
                 url: '/profile',
                 views: {
