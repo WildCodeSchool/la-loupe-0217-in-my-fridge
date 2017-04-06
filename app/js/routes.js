@@ -11,10 +11,11 @@ angular.module('app')
                         templateUrl: 'anon/navbar.html',
                         controller: 'NavbarController'
                     },
-                    'footer@':{
-                      templateUrl: 'anon/footer.html',
-                      controller: 'FooterController'
+                    'footer@': {
+                        templateUrl: 'anon/footer.html',
+                        controller: 'FooterController'
                     }
+
                 }
             })
             .state('anon.home', {
@@ -25,7 +26,17 @@ angular.module('app')
                         controller: 'MainController'
                     }
                 }
+            })
+            .state('anon.detail', {
+                url: '/detail/:id',
+                views: {
+                    'content@': {
+                        templateUrl: 'anon/detail.html',
+                        controller: 'DetailController'
+                    }
+                }
             });
+
         $stateProvider
             .state('user', {
                 abstract: true,
@@ -35,9 +46,9 @@ angular.module('app')
                         templateUrl: 'user/navbar.html',
                         controller: 'NavbarController'
                     },
-                    'footer@':{
-                      templateUrl: 'anon/footer.html',
-                      controller: 'FooterController'
+                    'footer@': {
+                        templateUrl: 'anon/footer.html',
+                        controller: 'FooterController'
                     }
                 },
                 data: {

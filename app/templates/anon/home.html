@@ -1,226 +1,163 @@
 <!--Login-Register Modal -->
-
-<div class="row modal fade" id="logMod">
-    <div class="col-xs-6 col-xs-offset-3 login-modal">
-        <form class="form" name="loginForm" novalidate ng-submit="login()">
-            <div ng-repeat="error in errors">{{error.error}}</div>
-            <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                <input id="email" type="email" class="form-control" ng-model="user.email" required placeholder="Email Address">
-            </div>
-            <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                <input id="password" type="password" class="form-control" ng-model="user.password" required placeholder="Password">
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">Login</button>
-        </form>
+<div class="bodystyle">
+    <div class="row modal fade" id="logMod">
+        <div class="col-xs-6 col-xs-offset-3 login-modal">
+            <form class="form" name="loginForm" novalidate ng-submit="login()">
+                <div ng-repeat="error in errors">{{error.error}}</div>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input id="email" type="email" class="form-control input-modal" ng-model="user.email" required placeholder="Email Address">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    <input id="password" type="password" class="form-control input-modal" ng-model="user.password" required placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+            </form>
+        </div>
     </div>
+
+    <div class="row modal fade" id="regMod">
+        <div class="col-xs-6 col-xs-offset-3 login-modal">
+            <form class="form" name="loginForm" novalidate ng-submit="register()">
+                <div ng-repeat="error in errors">{{error.error}}</div>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input id="email" type="email" class="form-control input-modal" ng-model="user.email" required placeholder="Email Address">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    <input id="password" type="password" class="form-control input-modal" ng-model="user.password" required placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Register</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Home -->
+
+    <div class="container-fluid home" id="main">
+        <div class="row">
+            <div class="col-sm-5 col-md-3 text-center" id="fridge">
+                <div class="categories">
+
+                    <h2>Category</h2>
+                    <div class="row">
+                        <div class="col-xs-4 hvr-bounce-in">
+                            <a href=""><img class="icons" ng-click="ingredients=dairy" src="img/Milk-icon.svg" alt=""></a>
+                            <p>Dairy</p>
+                        </div>
+
+                        <div class="col-xs-4 hvr-bounce-in">
+                            <a href=""><img class="icons" ng-click="ingredients=meat" src="img/Meat-icon.svg" alt=""></a>
+                            <p>Meats</p>
+                        </div>
+
+                        <div class="col-xs-4 hvr-bounce-in">
+                            <a href=""><img class="icons" ng-click="ingredients=fish" src="img/Fish-icon.svg" alt=""></a>
+                            <p>Fish</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-4 hvr-bounce-in">
+                            <a href=""><img class="icons" ng-click="ingredients=fruits" src="img/Strawberry-icon.svg" alt=""></a>
+                            <p>Fruits</p>
+                        </div>
+
+                        <div class="col-xs-4 hvr-bounce-in">
+                            <a href=""><img class="icons" ng-click="ingredients=spices" src="img/Kettle-icon.svg" alt=""></a>
+                            <p>Spices</p>
+                        </div>
+
+                        <div class="col-xs-4 hvr-bounce-in">
+                            <a href=""><img class="icons" ng-click="ingredients=vegetables" src="img/Tomato-icon.svg" alt=""></a>
+                            <p class="vegetables">Vegetables</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="ingredients">
+                    <div class="row wrist">
+                        <div class="col-xs-12">
+                            <h2>Ingredients</h2>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="bloc-ingredients">
+                        <span ng-repeat="ingredient in ingredients" ng-class="{space:!$last}">
+                                    <a href=""><span class="span-ingredients hvr-glow" ng-click="show(ingredient)">{{ingredient}}</span></a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xs-12 col-sm-6 search text-center" style="font-size:33px">
+
+                <h1 class="title-font">In My Fridge</h1>
+                <p>Quick way to find easily all recipes with your leftover food or ingredients.</p>
+                <form class="home-search">
+                    <div class="row">
+                        <div class="col-xs-offset-1 col-xs-10">
+                            <div class="form ng-submit">
+                                <input type="text" class="form-control" placeholder="" ng-model='selected'>
+                                <!-- <div ng-repeat="ingredient in recipes">{{}}</div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" ng-click="showRecipe1()" class="btn btn-primary btn-find">Find Recipes</button></form>
+            </div>
+
+            <div class="col-xs-12 col-sm-3 rightside">
+                <div ng-repeat="data in datas">
+                    <div class="row back-pre-results fadeIn animated hvr-grow">
+                        <div class="left-pre-results">
+                            <a ng-click='showDetail(data.recipe_id)' class="photos" style="background-image: url({{data.image_url}});"></a>
+                        </div>
+                        <div class="right-pre-results">
+                            <div class="">
+                                <p class="title-pre-results">{{data.title}}</p>
+                                <!-- <p>{{data.publisher_url}}</p> -->
+                                <div class="fa-fa-pre-results">
+                                    <i class="fa fa-heart fa-2x" style="color:black" aria-hidden="true"></i>
+                                    <i class="fa fa-comments fa-2x" style="color:black" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 </div>
 
-<div class="row modal fade" id="regMod">
-    <div class="col-xs-6 col-xs-offset-3 login-modal">
-        <form class="form" name="loginForm" novalidate ng-submit="register()">
-            <div ng-repeat="error in errors">{{error.error}}</div>
-            <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                <input id="email" type="email" class="form-control" ng-model="user.email" required placeholder="Email Address">
-            </div>
-            <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                <input id="password" type="password" class="form-control" ng-model="user.password" required placeholder="Password">
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">Register</button>
-        </form>
-    </div>
-</div>
 
 
-<!-- Home -->
+  <div class="container-fluid fava">
+      <h3 class="text-center title-font Cook policecolor">Just Cook It!</h3>
 
-<div class="container-fluid home" id="main">
-    <div class="row">
-        <div class="col-xs-12 col-sm-3 text-center" id="fridge">
-            <div class="categories">
-
-              <h2>Category</h2>
-              <div class="row">
-                  <div class="col-xs-4">
-                      <a href=""><img class="icons" ng-click="ingredients=dairy" src="img/Milk-icon.svg" alt=""></a>
-                      <p>Dairy</p>
-                  </div>
-
-                  <div class="col-xs-4">
-                      <a href=""><img class="icons" ng-click="ingredients=meat"src="img/Meat-icon.svg"  alt=""></a>
-                      <p>Meats</p>
-                  </div>
-
-                  <div class="col-xs-4">
-                      <a href=""><img class="icons" ng-click="ingredients=fish" src="img/Fish-icon.svg" alt=""></a>
-                      <p>Fish</p>
-                  </div>
-              </div>
-
-              <div class="row">
-                  <div class="col-xs-4">
-                      <a href=""><img class="icons" ng-click="ingredients=fruits" src="img/Strawberry-icon.svg" alt=""></a>
-                      <p>Fruits</p>
-                  </div>
-
-                  <div class="col-xs-4">
-                      <a href=""><img class="icons" ng-click="ingredients=spices" src="img/Kettle-icon.svg" alt=""></a>
-                      <p>Spices</p>
-                  </div>
-
-                  <div class="col-xs-4">
-                      <a href=""><img class="icons" ng-click="ingredients=vegetables" src="img/Tomato-icon.svg" alt=""></a>
-                      <p>Vegetables</p>
+      <div class="row fava" ng-repeat="data in datas">
+          <div class="col-xs-3">
+              <div class="thumbnail">
+                <a ng-click='showDetail(data.recipe_id)'><img class="thbimg" src="{{data.image_url}}"></a>
+                  <div class="caption text-center">
+                      <h3>{{data.title}}</h3>
+                      <a><i  style="color:black;"class="fa fa-share-alt-square fa-4x"></i></a><i style="color:black;" class="fa fa-heart fa-4x"></i><i  style="color:black;"class="fa fa-commenting fa-4x" aria-hidden="true"></i>
                   </div>
               </div>
 
           </div>
 
-          <div class="ingredients">
-              <div class="row">
-                  <div class="col-xs-2">
-                      <img class="wrist" src="img/poignet.png" alt="">
-                  </div>
-                  <div class="col-xs-9">
 
-                      <h2>Ingredients</h2>
-                  </div>
-              </div>
-
-              <ul >
-
-                <li ng-repeat="ingredient in ingredients" class="ingredient">{{ingredient}}</li>
-              </ul>
-
-
-
-
-            </div>
-        </div>
-
-
-        <div class="col-xs-12 col-sm-6 search text-center" style="font-size:33px">
-
-            <h1 class="title-font">In My Fridge</h1>
-            <p>Quick way to find easily all recipes with your leftover food or ingredients.</p>
-            <form>
-                <div class="row">
-                    <div class="col-xs-offset-2 col-xs-8">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="">
-                            <div ng-repeat="recipe in recipes">{{}}</div>
-                        </div>
-                    </div>
-                </div>
-                <button type="submit" ng-click="repRecipes()" class="btn btn-primary">Find Recipes</button></form>
-        </div>
-
-        <div class="col-xs-12 col-sm-3 rightside">
-
-                <div class="row recipes" style="background-color:#0E9EFF">
-
-                    <div class="col-xs-3 photos">
-
-                        <a href="#"><img class="photos" src="img/cajun.jpg" alt=""></a>
-                    </div>
-
-                    <div class="col-xs-9 text-center">
-                        <div class="">
-
-
-                            <p>Cajun Chicken Pasta</p>
-                            <p>The Pioneer Woman</p>
-
-                            <div class=""><i class="fa fa-heart fa-2x" style="color:black" aria-hidden="true"></i>
-                                <i class="fa fa-comments fa-2x" style="color:black" aria-hidden="true"></i>
-                            </div>
-
-
-                        </div>
-
-                    </div>
-                </div>
-
-
-                <div class="row recipes" style="background-color:orange">
-                    <div class="col-xs-3 photos">
-
-                        <a href="#"><img class="photos" src="img/cajun.jpg" alt=""></a>
-
-                    </div>
-
-                    <div class="col-xs-9 text-center">
-                        <div class="">
-
-
-                            <p>Cajun Chicken Pasta</p>
-                            <p>The Pioneer Woman</p>
-
-                            <div class=""><i class="fa fa-heart fa-2x" style="color:black" aria-hidden="true"></i>
-                                <i class="fa fa-comments fa-2x" style="color:black" aria-hidden="true"></i>
-                            </div>
-
-
-                        </div>
-
-                    </div>
-                </div>
-
-
-                <div class="row recipes" style="background-color:maroon">
-
-                    <div class="col-xs-3 photos">
-
-                        <a href="#"><img class="photos" src="img/cajun.jpg" alt=""></a>
-
-                    </div>
-
-                    <div class="col-xs-9 text-center">
-                        <div class="">
-
-
-                            <p>Cajun Chicken Pasta</p>
-                            <p>The Pioneer Woman</p>
-
-                            <div class=""><i class="fa fa-heart fa-2x" style="color:black" aria-hidden="true"></i>
-                                <i class="fa fa-comments fa-2x" style="color:black" aria-hidden="true"></i>
-                            </div>
-
-
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="row recipes" style="background-color:purple">
-
-                    <div class="col-xs-3 photos">
-
-                        <a href="#"><img class="photos" src="img/cajun.jpg" alt=""></a>
-                    </div>
-
-                    <div class="col-xs-9 text-center">
-                        <div class="">
-
-
-                            <p>Cajun Chicken Pasta</p>
-                            <p>The Pioneer Woman</p>
-
-                            <div class=""><i class="fa fa-heart fa-2x" style="color:black" aria-hidden="true"></i>
-                                <i class="fa fa-comments fa-2x" style="color:black" aria-hidden="true"></i>
-                            </div>
-
-
-                        </div>
-
-                    </div>
-                </div>
-
-              </div>
-            </div>
-
-    </div>
-</div>
+          </div>
+      </div>

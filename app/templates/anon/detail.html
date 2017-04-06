@@ -1,0 +1,17 @@
+<div class="container-fluid">
+<img src="{{recipe.image_url}}" alt="">
+  <div class="detail">
+    <h1>{{recipe.title}}</h1>
+    <h2>Ingredients:</h2>
+    <ul>
+      <li ng-repeat= " ingredient in ingredients ">{{ingredient}}</li>
+    </ul>
+    <h2>Directions:</h2>
+    <div class"">
+      <a ng-bind-html="bindHtml"></a>
+
+
+    </div>
+
+  </div>
+</div>
