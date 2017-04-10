@@ -206,9 +206,7 @@ space:after {
     margin-bottom: 4%;
 }
 
-.vegetables {
-    margin-left: -8px;
-}
+.vegetables {}
 
 .icons {
     width: 90%;
@@ -254,7 +252,6 @@ space:after {
     box-shadow: 3px 3px 6px 0 rgba(39, 39, 39, 0.7);
     padding: 5px 10px;
 }
-
 .fa-fa-detail-results {
     position: absolute;
     right: 10%;
@@ -544,8 +541,6 @@ footer ul {
     background-image: url(/img/4454029-food.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
-    box-shadow: 0px 6px 15px 0 rgba(0, 0, 0, 0.85);
 }
 
 .back-form-profile {
@@ -589,7 +584,7 @@ input[type="file"] {
 
 .dashb {
     min-height: 100vh;
-    background-image: url(/img/dashboard-background.jpg);
+    background-image: url(/img/legumes-2_preview.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -597,9 +592,12 @@ input[type="file"] {
 }
 
 
-.dashc {
-  padding: 0 15px;
-}
+/*.dashc {
+    min-height: 30vh;
+    width: auto;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.8);
+}*/
 
 .thbimg {
     margin-top: 2vh;
@@ -633,4 +631,3 @@ i {
 a.thumbnail {
     color: black;
 }
-

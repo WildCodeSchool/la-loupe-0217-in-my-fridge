@@ -3,14 +3,14 @@
 
     <div class="row dashc">
 
-      <div class="col-sm-3 hvr-grow" ng-repeat = "recipe in recipes">
+      <div class="col-sm-3 hvr-grow">
           <div class="thumbnail text-center">
               <!-- <a ng-click='showDetail(data.recipe_id)'><img class="thbimg" src="{{data.image_url}}"></a> -->
-              <a ng-click='showDetail(recipe.recipe_id)' class="img-results" style="background-image: url({{recipe.image_url}});"></a>
-              <h3>{{recipe.title}}</h3>
+              <a ng-click='showDetail(data.recipe_id)' class="img-results" style="background-image: url({{data.image_url}});"></a>
+              <h3>{{data.title}}</h3>
               <div class="caption text-center absolute">
-
-                   <a ng-click ="addFav"href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]=http://www.example.com&p[images][0]=&p[title]=Title%20Goes%20Here&p[summary]=Description%20goes%20here!" target="_blank" onclick="window.open(this.href,'targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=250'); return false"><i  style="color:black;"class="fa fa-share-alt-square fa-4x"></i></a>
+                  <a href="#"><i  style="color:black;"class="fa fa-share-alt-square fa-4x"></i></a>
+                  <a href="#"><i style="color:black;" class="fa fa-heart fa-4x"></i></a>
                   <a href="#"><i  style="color:black;"class="fa fa-commenting fa-4x" aria-hidden="true"></i></a>
               </div>
           </div>
