@@ -113,7 +113,7 @@
                             </div>
                         </div>
                     </div>
-                    <button type="submit" ng-click="showRecipe1()"class="btn btn-primary btn-find">Find Recipes</button></form>
+                    <button du-smooth-scroll href="#menus" type="submit" ng-click="showRecipe1()"class="btn btn-primary btn-find">Find Recipes</button></form>
             </div>
 
             <div class="col-xs-12 col-sm-3 rightside">
@@ -127,6 +127,7 @@
                                 <p class="title-pre-results">{{data.title}}</p>
                                 <!-- <p>{{data.publisher_url}}</p> -->
                                 <div class="fa-fa-pre-results">
+                                    <a href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]=http://www.example.com&p[images][0]=&p[title]=Title%20Goes%20Here&p[summary]=Description%20goes%20here!" target="_blank" onclick="window.open(this.href,'targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=250'); return false"><i  style="color:black;"class="fa fa-share-alt-square fa-2x"></i></a>
                                     <a ng-click="addfav(data.recipe_id)"><i class="fa fa-heart fa-2x" style="color:black" aria-hidden="true"></i></a>
                                     <i class="fa fa-comments fa-2x" style="color:black" aria-hidden="true"></i>
                                 </div>
@@ -146,7 +147,7 @@
 
 
 
-<div class="container-fluid fava">
+<div class="container-fluid fava" id="menus">
     <h3 class="text-center title-font Cook policecolor">Just Cook It!</h3>
 
 
@@ -157,12 +158,11 @@
                 <a ng-click='showDetail(data.recipe_id)' class="img-results" style="background-image: url({{data.image_url}});"></a>
                 <h3>{{data.title}}</h3>
                 <div class="caption text-center absolute">
-                    <a href="#"><i  style="color:black;"class="fa fa-share-alt-square fa-4x"></i></a>
-                    <a href="#"><i style="color:black;" class="fa fa-heart fa-4x"></i></a>
+                     <a href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]=http://www.example.com&p[images][0]=&p[title]=Title%20Goes%20Here&p[summary]=Description%20goes%20here!" target="_blank" onclick="window.open(this.href,'targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=250'); return false"><i  style="color:black;"class="fa fa-share-alt-square fa-4x"></i></a>
+                    <a ng-click="addfav(data.recipe_id)" href="#"><i style="color:black;" class="fa fa-heart fa-4x"></i></a>
                     <a href="#"><i  style="color:black;"class="fa fa-commenting fa-4x" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
